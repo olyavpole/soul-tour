@@ -1,0 +1,178 @@
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__top-inner flex-jc">
+                        <a class="header__top-logo" href="index.html">
+                            <img class="header__top-img" src="images/logo/logo.svg" alt="logo">
+                        </a>
+
+                        <div class="header__top-contacts">
+                            Нужна помощь? Звони <a class="header__top-phone"
+                                href="tel:89110001200">8-911-000-12-00</a>
+                        </div>
+
+                        <div class="header__top-buttons">
+                            <a class="header__top-btn button" data-fancybox data-src="#search-form"
+                                href="javascript:;">Подбор
+                                тура</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__bottom-inner">
+                        <nav class="header__menu">
+                            <button class="header__burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <ul class="header__menu-list">
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link header__menu-link--dropdown" href="#">
+                                        О нас
+                                    </a>
+                                    <ul class="header__menu-dropdown dropdown">
+                                        <li class="dropdown__item"><a class="dropdown__link" href="index.html#about-us">Наши
+                                                ценности</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="index.html#achievements">Почему мы?</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link header__menu-link--dropdown"
+                                        href="index.html#our-destinations">
+                                        Направления
+                                    </a>
+                                    <ul class="header__menu-dropdown dropdown">
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Кавказ</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Индонезия</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Крым</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Непал</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="#our-tours">Туры</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="#feedback">Отзывы</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="#footer">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-form whitespace" id="search-form">
+                <div class="popup-form__body">
+                    <span class="popup-form__top">
+                        Подобрать поход
+                    </span>
+                    <div class="popup-form__title">
+                        Заполните эту анкету, и мы подберем для вас максимално подходящее путешествие по всем
+                        параметрам.
+                    </div>
+                    <form class="popup-form__form">
+                        <label class="popup-form__label" for="username">
+                            ФИО
+                        </label>
+                        <input class="popup-form__input input" type="text" name="username" id="username"
+                            placeholder="Иванов Иван Иванович" required>
+                        <label class="popup-form__label" for="phone">
+                            Номер телефона
+                        </label>
+                        <input class="popup-form__input input" type="tel" name="tel" id="phone" placeholder="+7 911 999 99 99"
+                            required>
+
+                        <label class="popup-form__label" for="mail">
+                            Адрес электронной почты
+                        </label>
+                        <input class="popup-form__input input" type="email" name="mail" id="mail" placeholder="ivan@domain.com"
+                            required>
+
+                        <div class="popup-form__wrapper flex-jc">
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="destination">Направление</label>
+                                <select class="popup-form__select select" name="destination" id="destination">
+                                    <option value="Кавказ">Кавказ</option>
+                                    <option value="Непал">Непал</option>
+                                    <option value="Алтай">Алтай</option>
+                                    <option value="Альпы">Альпы</option>
+                                    <option value="Индонезия">Индонезия</option>
+                                </select>
+                            </div>
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="type">Тип похода</label>
+                                <select class="popup-form__select select" name="type" id="type">
+                                    <option value="Легкий пеший поход">Легкий пеший поход</option>
+                                    <option value="Поход с рюкзаками">Поход с рюкзаками</option>
+                                    <option value="Скалолазание">Скалолазание</option>
+                                    <option value="Восхождение">Восхождение</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label class="popup-form__label" for="date">
+                            Примерные даты путешествия
+                        </label>
+                        <input class="popup-form__input input" type="text" name="date" id="date"
+                            placeholder="11.01.2021 - 30.01.2021" required>
+
+                        <label class="popup-form__label" for="budget">
+                            Бюджет
+                        </label>
+                        <input class="popup-form__input input" type="text" name="budget" id="budget" placeholder="50000 рублей">
+
+
+                        <div class="popup-form__wrapper flex-jc">
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="living">Проживание</label>
+                                <select class="popup-form__select select" name="living" id="living">
+                                    <option value="В гостинице">В гостинице</option>
+                                    <option value="В палатке">В палатке</option>
+                                    <option value="Неважно">Неважно</option>
+                                </select>
+                            </div>
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="experience">Опыт</label>
+                                <select class="popup-form__select select" name="experience" id="experience">
+                                    <option value="Новичок">Новичок</option>
+                                    <option value="Любитель">Любитель</option>
+                                    <option value="Опытный">Опытный</option>
+                                    <option value="Профессионал">Профессионал</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <input class="popup-form__input input--checkbox" type="checkbox" name="children" id="children">
+                        <label class="popup-form__label popup-form__label--checkbox" for="children">
+                            Дети
+                        </label>
+
+                        <button class="popup-form__btn button" type="submit">Отправить</button>
+                    </form>
+                    <div class="popup-form__bottom">
+                        <div class="popup-form__text">
+                            Нажимая «Подобрать бесплатно», вы соглашаетесь на <a class="popup-form__text-link"
+                                href="#">обработку персональных данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>

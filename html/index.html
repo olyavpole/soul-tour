@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Tour</title>
+    <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="page__wrapper">
+        <main class="page__content">
+            @@include('_header.html')
+
+            <section class="welcome">
+                <div class="container">
+                    <div class="welcome__inner">
+                        <div class="welcome__wrapper">
+                            <div class="welcome__title">
+                                Авторские туры
+                                <span class="welcome__subtitle">по всему свету</span>
+                            </div>
+                            <div class="welcome__text">
+                                Привет! Soul Tour - это команда людей, влюбленных в путешествия и стремящихся заразить
+                                этой любовью
+                                весь мир! Присоединяйся к нам и не пожалеешь!
+                            </div>
+                            <a class="welcome__btn button" data-fancybox data-src="#search-form"
+                                href="javascript:;">Оставить заявку</a>
+                            <div class="welcome__form">
+                                <form class="welcome__form-form whitespace">
+                                    <div class="welcome__form-title">
+                                        Быстрый подбор тура
+                                    </div>
+                                    <div class="welcome__form-wrapper">
+                                        <div class="welcome__form-column">
+                                            <label class="welcome__form-label" for="destination">Куда</label>
+                                            <select class="welcome__form-select select" name="destination"
+                                                id="destination">
+                                                <option value="Кавказ">Кавказ</option>
+                                                <option value="Непал">Непал</option>
+                                                <option value="Алтай">Алтай</option>
+                                                <option value="Альпы">Альпы</option>
+                                                <option value="Индонезия">Индонезия</option>
+                                            </select>
+                                        </div>
+                                        <div class="welcome__form-column">
+                                            <label class="welcome__form-label" for="date">Дата отправления</label>
+                                            <input class="welcome__form-select select welcome__form-select--date"
+                                                type="date" name="date" id="date">
+                                        </div>
+                                        <div class="welcome__form-column">
+                                            <label class="welcome__form-label" for="days">Количество дней</label>
+                                            <select class="welcome__form-select select welcome__form-select--numbers"
+                                                name="days" id="days">
+                                                <option value="3-6">3-6</option>
+                                                <option value="7-10">7-10</option>
+                                                <option value="10-14">10-14</option>
+                                                <option value="14+">14+</option>
+                                            </select>
+                                        </div>
+                                        <div class="welcome__form-column">
+                                            <label class="welcome__form-label" for="hardness">Сложность</label>
+                                            <select class="welcome__form-select select  welcome__form-select--numbers"
+                                                name="hardness" id="hardness">
+                                                <option value="2/6">2/6</option>
+                                                <option value="3/6">3/6</option>
+                                                <option value="4/6">4/6</option>
+                                                <option value="5/6">5/6</option>
+                                                <option value="6/6">6/6</option>
+                                            </select>
+                                        </div>
+                                        <div class="welcome__form-column">
+                                            <button class="welcome__form-btn button">
+                                                Искать
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us section" id="about-us">
+                <div class="container">
+                    <div class="about-us__inner">
+                        <div class="about-us__title title">
+                            Наши ценности
+                        </div>
+                        <div class="about-us__wrapper flex-jc">
+                            <div class="about-us__item whitespace">
+                                <img class="about-us__item-icon" src="images/icons-travel/compass.svg" alt="image">
+                                <div class="about-us__item-title">
+                                    Самые интересные маршруты
+                                </div>
+                                <div class="about-us__item-text">
+                                    У нас ты найдешь самые креативные и небанальные маршруты. Мы стремимся показать тебе
+                                    самые удивительные достопримечательности, при этом избежав толп других туристов.
+                                </div>
+                            </div>
+
+                            <div class="about-us__item whitespace">
+                                <img class="about-us__item-icon" src="images/icons-travel/hiker.svg" alt="image">
+                                <div class="about-us__item-title">
+                                    Лучшие гиды
+                                </div>
+                                <div class="about-us__item-text">
+                                    Наши гиды - увлеченные и надежные, как и мы, влюбленные в путешествия и в людей. Их
+                                    цель - показать вам этот прекрасный мир и сделать это максимально безопасно.
+                                    Инструкторы постоянно учатся, проходят курсы по психологии, медицинской помощи,
+                                    улучшают свои организаторские способности.
+                                </div>
+                            </div>
+
+                            <div class="about-us__item whitespace">
+                                <img class="about-us__item-icon" src="images/icons-travel/customer-service-agent.svg"
+                                    alt="image">
+                                <div class="about-us__item-title">
+                                    Лучшие менеджеры
+                                </div>
+                                <div class="about-us__item-text">
+                                    Все наши менеджеры - не сухие "продажники", а люди, имеющие большой опыт путешествий
+                                    и любящие их. Они знают все про особенности перелетов, горное снаряжение и все
+                                    нюансы наших маршрутов.
+                                </div>
+                            </div>
+
+                            <div class="about-us__item whitespace">
+                                <img class="about-us__item-icon" src="images/icons-travel/beach-chair.svg" alt="image">
+                                <div class="about-us__item-title">
+                                    Максимальный комфорт
+                                </div>
+                                <div class="about-us__item-text">
+                                    Мы стараемся обеспечить самые приятные условия существования в путешествиях, даже
+                                    высоко в горах вас будет окружать комфорт и тепло. Постоянно находимся в поисках
+                                    лучших отелей и кемпингов.
+                                </div>
+                            </div>
+
+                            <div class="about-us__item whitespace">
+                                <img class="about-us__item-icon" src="images/icons-travel/photo-camera.svg" alt="image">
+                                <div class="about-us__item-title">
+                                    Самые красивые виды
+                                </div>
+                                <div class="about-us__item-text">
+                                    Мы понимаем, что важной частью путешествия являются фотографии, которые помогут вам
+                                    запомнить поездку на всю жизнь. Наши гиды не боятся сойти с тропы, чтобы показать
+                                    вам лучший вид, не испорченный толпой других туристов.
+                                </div>
+                            </div>
+
+                            <div class="about-us__item whitespace">
+                                <img class="about-us__item-icon" src="images/icons-travel/food-tray.svg" alt="image">
+                                <div class="about-us__item-title">
+                                    Гастрономический опыт
+                                </div>
+                                <div class="about-us__item-text">
+                                    Мы большие фанаты локальной кухни, ведь гастрономия это очень важная деталь для
+                                    понимания культуры страны. Посещаем только аутентичные рестораны и кафе, где вы
+                                    сможете познакомиться с местными блюдами и пообщаться с шеф-поварами.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="achievements" id="achievements">
+                <div class="container">
+                    <div class="achievements__title title">
+                        Почему именно мы?
+                    </div>
+                    <div class="achievements__inner flex-jc">
+                        <div class="achievements__item">
+                            <div class="achievements__item-number achievements__item-number--red">
+                                0
+                            </div>
+                            <div class="achievements__item-text item-text">
+                                человека сходили с нами в поход и остались довольны
+                            </div>
+                        </div>
+                        <div class="achievements__item">
+                            <div class="achievements__item-number achievements__item-number--yellow">
+                                0
+                            </div>
+                            <div class="achievements__item-text item-text">
+                                из них посоветовали нас своим друзьям
+                            </div>
+                        </div>
+                        <div class="achievements__item">
+                            <div class="achievements__item-number achievements__item-number--green">
+                                0
+                            </div>
+                            <div class="achievements__item-text item-text">
+                                людей остались разочарованы (это всего 0.5%)
+                            </div>
+                        </div>
+                        <div class="achievements__item">
+                            <div class="achievements__item-number achievements__item-number--blue">
+                                0
+                            </div>
+                            <div class="achievements__item-text item-text">
+                                поездок мы уже провели, и это число постоянно растет
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="our-destinations section" id="our-destinations">
+                <div class="container">
+                    <div class="our-destinations__inner">
+                        <div class="our-destinations__title title">
+                            Направления
+                        </div>
+                        <div class="our-destinations__text text">
+                            Познакомтесь с направлениями, которые мы предлагаем. Они максимально разнообразны: от
+                            ледяных гор до тропических лесов.
+                        </div>
+                        <div class="our-destinations__slider">
+                            <div class="our-destinations__slider-inner">
+                                <div class="our-destinations__slider-item whitespace flex-jc">
+                                    <img class="our-destinations__slider-img" src="images/kavkaz.jpg" alt="image">
+                                    <div class="our-destinations__slider-content">
+                                        <a class="our-destinations__slider-title" href="single-destination.html"
+                                            target="_blank">Кавказ</a>
+                                        <div class="our-destinations__slider-info info">
+                                            <a class="info__item info__item--world lnr-map-marker" href="#">
+                                                Азия
+                                            </a>
+                                            <span class="info__item info__item--price lnr-diamond">
+                                                от 7000 рублей
+                                            </span>
+                                            <span class="info__item info__item--days lnr-sun">
+                                                от 3 дней
+                                            </span>
+                                        </div>
+                                        <div class="our-destinations__slider-text item-text">
+                                            Кавказ покорит вас своими вековыми величественными ледниками и усыпанными
+                                            снегом
+                                            вершинами, труднопроходимыми перевалами и стремительными горными реками,
+                                            цветущими альпийскими лугами и пенящимися бурными водопадами.
+                                        </div>
+                                        <div class="our-destinations__slider-subtitle">
+                                            Популярные туры в этом направлении:
+                                        </div>
+                                        <ul class="our-destinations__slider-list">
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Восхождение на
+                                                    Казбек</a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Восхождение на
+                                                    Эльбрус с юга</a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Легкий поход по
+                                                    Сванетии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-destinations__slider-inner">
+                                <div class="our-destinations__slider-item whitespace flex-jc">
+                                    <img class="our-destinations__slider-img" src="images/bali.jpg" alt="image">
+                                    <div class="our-destinations__slider-content">
+                                        <a class="our-destinations__slider-title" href="single-destination.html"
+                                            target="_blank">Индонезия</a>
+                                        <div class="our-destinations__slider-info info">
+                                            <a class="info__item info__item--world lnr-map-marker" href="#">
+                                                Азия
+                                            </a>
+                                            <span class="info__item info__item--price lnr-diamond">
+                                                от 50000 рублей
+                                            </span>
+                                            <span class="info__item info__item--days lnr-sun">
+                                                от 10 дней
+                                            </span>
+                                        </div>
+                                        <div class="our-destinations__slider-text item-text">
+                                            Индонезия - экзотическая страна Юго-восточной Азии на стыке двух океанов.
+                                            Белоснежные пляжи с чистой водой, коралловые рифы, первозданная природа,
+                                            необычный животный и растительный мир, огненные вулканы, древние храмы - вот
+                                            ради чего мы отправляемся в трекинг по Индонезии.
+                                        </div>
+                                        <div class="our-destinations__slider-subtitle">
+                                            Популярные туры в этом направлении:
+                                        </div>
+                                        <ul class="our-destinations__slider-list">
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Треккинг по
+                                                    вулканам
+                                                    Индонезии</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-destinations__slider-inner">
+                                <div class="our-destinations__slider-item whitespace flex-jc">
+                                    <img class="our-destinations__slider-img" src="images/nepal.jpg" alt="image">
+                                    <div class="our-destinations__slider-content">
+                                        <a class="our-destinations__slider-title" href="single-destination.html"
+                                            target="_blank">
+                                            Непал
+                                        </a>
+                                        <div class="our-destinations__slider-info info">
+                                            <span class="info__item info__item--world lnr-map-marker">
+                                                Азия
+                                            </span>
+                                            <span class="info__item info__item--price lnr-diamond">
+                                                от 70000 рублей
+                                            </span>
+                                            <span class="info__item info__item--days lnr-sun">
+                                                от 14 дней
+                                            </span>
+                                        </div>
+                                        <div class="our-destinations__slider-text item-text">Удивительный Непал –
+                                            мистическое место между Китаем и Индией. Родина Будды, обитель мудрых лам и
+                                            просветленных монахов, самая высокогорная и одна из беднейших стран мира.
+                                            Катманду объявлен охраняемым ЮНЕСКО объектом всемирного наследия.
+                                        </div>
+                                        <div class="our-destinations__slider-subtitle">
+                                            Популярные туры в этом направлении:
+                                        </div>
+                                        <ul class="our-destinations__slider-list">
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Треккинг к
+                                                    базовому
+                                                    лагерю Эвереста</a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Восхождение на
+                                                    Ама
+                                                    Даблам</a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Трек вокруг
+                                                    Аннапурны</a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Восхождение на
+                                                    Айленд
+                                                    пик</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-destinations__slider-inner">
+                                <div class="our-destinations__slider-item whitespace flex-jc">
+                                    <img class="our-destinations__slider-img" src="images/altai.jpg" alt="image">
+                                    <div class="our-destinations__slider-content">
+                                        <a class="our-destinations__slider-title" href="single-destination.html"
+                                            target="_blank">
+                                            Алтай
+                                        </a>
+                                        <div class="our-destinations__slider-info info">
+                                            <a class="info__item info__item--world lnr-map-marker" href="#">
+                                                Азия
+                                            </a>
+                                            <span class="info__item info__item--price lnr-diamond">
+                                                от 15000 рублей
+                                            </span>
+                                            <span class="info__item info__item--days lnr-sun">
+                                                от 5 дней
+                                            </span>
+                                        </div>
+                                        <div class="our-destinations__slider-text item-text">
+                                            Горный Алтай называют «русской Швейцарией», ведь местные пейзажи не уступают
+                                            по
+                                            красоте альпийским. Регион находится на стыке нескольких природных зон:
+                                            тайги,
+                                            степи и полупустыни, взяв от каждой самые живописные виды. Цены на туры по
+                                            Алтаю
+                                            доступны почти всем, в отличие от отдыха в горах Европы.
+                                        </div>
+                                        <div class="our-destinations__slider-subtitle">
+                                            Популярные туры в этом направлении:
+                                        </div>
+                                        <ul class="our-destinations__slider-list">
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Восхождение на
+                                                    Белуху
+                                                </a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">
+                                                    Сплав по реке Катунь
+                                                </a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">
+                                                    Пеший поход к подножию Белухи
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-destinations__slider-inner">
+                                <div class="our-destinations__slider-item whitespace flex-jc">
+                                    <img class="our-destinations__slider-img" src="images/alps.jpg" alt="image">
+                                    <div class="our-destinations__slider-content">
+                                        <a class="our-destinations__slider-title" href="single-destination.html"
+                                            target="_blank">
+                                            Альпы
+                                        </a>
+                                        <div class="our-destinations__slider-info info">
+                                            <span class="info__item info__item--world lnr-map-marker">
+                                                Европа
+                                            </span>
+                                            <span class="info__item info__item--price lnr-diamond">
+                                                от 30000 рублей
+                                            </span>
+                                            <span class="info__item info__item--days lnr-sun">
+                                                от 7 дней
+                                            </span>
+                                        </div>
+                                        <div class="our-destinations__slider-text item-text">
+                                            Альпы – наивысшие горы Западной Европы. Они расположены на территории восьми
+                                            стран – Франции, Италии, Швейцарии, Германии, Австрии, Лихтенштейна,
+                                            Словении и
+                                            Монако. Походы в Альпах поражают даже самых искушенных ценителей
+                                            разнообразием
+                                            пейзажей.
+                                        </div>
+                                        <div class="our-destinations__slider-subtitle">
+                                            Популярные туры в этом направлении:
+                                        </div>
+                                        <ul class="our-destinations__slider-list">
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">Трек вокруг
+                                                    Монблана
+                                                </a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">
+                                                    Восхождение на Маттерхорн из Италии
+                                                </a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">
+                                                    Доломитовые Альпы без рюкзаков
+                                                </a>
+                                            </li>
+                                            <li class="our-destinations__slider-list-item">
+                                                <a class="our-destinations__slider-list-link" href="single-tour.html"
+                                                    target="_blank">
+                                                    Восхождение на Монблан с Италии
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="our-tours section" id="our-tours">
+                <div class="container">
+                    <div class="our-tours__inner">
+                        <div class="our-tours__title title">
+                            Наши туры
+                        </div>
+                        <div class="our-tours__text text">
+                            Ниже представлены наши самые популярные и любимые туры
+                        </div>
+                        <div class="our-tours__wrapper flex-jc">
+                            <div class="our-tours__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/everest.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html" target="_blank">
+                                        Треккинг к базовому лагерю Эвереста
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="#">
+                                            Непал
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            16 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Трекинг к базовому лагерю Эвереста дает вам возможность сполна насладиться
+                                        видами на
+                                        высочайшую вершину мира и окружающих ее гигантов в национальном парке
+                                        Сагарматха.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>6 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>70 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">70000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">23
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-tours__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/elbrus.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="#">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="#">
+                                        Восхождение на Эльбрус с юга
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="#">
+                                            Кавказ
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            10 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Эльбрус – мечта многих альпинистов и путешественников. Весь маршрут очень и
+                                        интересен, ведь тропинки проходят через самые живописные места Кавказа.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>5 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>40 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">45000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">19
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button"
+                                            href="single-tour.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-tours__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/beluha.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html" target="_blank">
+                                        Восхождение на Белуху
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="single-tour.html">
+                                            Алтай
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            13 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Мы осуществим восхождение на Белуху Восточную. Буддисты считают, что эта гора
+                                        священная, и здесь находится легендарная страна богов Шамбала. Они же до сих пор
+                                        верят, что в районе Белухи есть скрытый
+                                        вход в
+                                        магическую страну Беловодье.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>6 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>50 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">81000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">2
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button"
+                                            href="single-tour.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-tours__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/indonesia.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html" target="_blank">
+                                        Треккинг по вулканам Индонезии
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="#">
+                                            Индонезия
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            15 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        В нашем походе в Индонезии мы посетим самые красивые места трех островов: Ява,
+                                        Бали
+                                        и Ломбок. Нас ждет восхождение на Семеру - самый высокий вулкан острова Явы.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>3 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>70 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">60000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">6
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button"
+                                            href="single-tour.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-tours__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/montblanc.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html">
+                                        Восхождение на Монблан
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="#">
+                                            Италия
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            9 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Восхождение на Монблан с Италии - это возможность подняться на высочайшую
+                                        вершину
+                                        Альп по не самому тривиальному маршруту - Итальянскому гребню.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>7 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>60 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">90000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">10
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="our-tours__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/altai-walk.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="#">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="#">
+                                        Пеший поход к Белухе
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="#">
+                                            Алтай
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            12 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Алтай - одно из красивейших мест планеты, где обязан побывать каждый любитель
+                                        гор.
+                                        Мы отправимся в пеший поход к подножию Белухи.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>2 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>90 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">30000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">4
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="our-tours__btn button" href="all-tours.html" target="_blank">Смотреть все
+                            туры</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feedback section" id="feedback">
+                <div class="container">
+                    <div class="feedback__inner">
+                        <div class="feedback__title title">
+                            Отзывы о нас
+                        </div>
+                        <div class="feedback__text text">
+                            Как оно - ходить с нами в походы? Никто, кроме самих участников лучше не скажет. Поэтому
+                            читайте отзывы и отбрасывайте все сомнения. Мы сделаем ваш отдых незабываемым!
+
+                        </div>
+                        <div class="feedback__slider">
+                            <div class="feedback__slider-wrapper">
+                                <div class="feedback__slider-item whitespace">
+                                    <div class="feedback__slider-top flex-jc">
+                                        <img class="feedback__slider-avatar" src="images/avatar-woman.jpg" alt="avatar">
+                                        <div class="feedback__slider-about">
+                                            <a class="feedback__slider-name" href="#">
+                                                Татьяна
+                                            </a>
+                                            <span class="feedback__slider-info">
+                                                23 года
+                                            </span>
+                                            <span class="feedback__slider-info">
+                                                Треккинг к базовому лагерю Эвереста
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feedback__slider-text item-text">
+                                        Я очень рада, что свой первый поход я ходила с Soul Tour. Весь маршрут прошел
+                                        на одном дыхании - виды завораживали своим разнообразием. Очень комфортно, что
+                                        ты получаешь все ответы на свои вопросы. Не надо думать, куда идти, где
+                                        остановится на обед, на ночлег, нужно только идти и лицезреть монументальные
+                                        виды гор, прощая, отпуская и забывая все ненужное и оставляя в душе только
+                                        восхищение и благодать окружающего нас мира.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feedback__slider-wrapper">
+                                <div class="feedback__slider-item whitespace">
+                                    <div class="feedback__slider-top flex-jc">
+                                        <img class="feedback__slider-avatar" src="images/avatar-woman.jpg" alt="avatar">
+                                        <div class="feedback__slider-about">
+                                            <a class="feedback__slider-name" href="#">
+                                                Татьяна
+                                            </a>
+                                            <span class="feedback__slider-info">
+                                                23 года
+                                            </span>
+                                            <span class="feedback__slider-info">
+                                                Треккинг к базовому лагерю Эвереста
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feedback__slider-text item-text">
+                                        Я очень рада, что свой первый поход я ходила с Soul Tour. Весь маршрут прошел
+                                        на одном дыхании - виды завораживали своим разнообразием. Очень комфортно, что
+                                        ты получаешь все ответы на свои вопросы. Не надо думать, куда идти, где
+                                        остановится на обед, на ночлег, нужно только идти и лицезреть монументальные
+                                        виды гор, прощая, отпуская и забывая все ненужное и оставляя в душе только
+                                        восхищение и благодать окружающего нас мира.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feedback__slider-wrapper">
+                                <div class="feedback__slider-item whitespace">
+                                    <div class="feedback__slider-top flex-jc">
+                                        <img class="feedback__slider-avatar" src="images/avatar-woman.jpg" alt="avatar">
+                                        <div class="feedback__slider-about">
+                                            <a class="feedback__slider-name" href="#">
+                                                Татьяна
+                                            </a>
+                                            <span class="feedback__slider-info">
+                                                23 года
+                                            </span>
+                                            <span class="feedback__slider-info">
+                                                Треккинг к базовому лагерю Эвереста
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feedback__slider-text item-text">
+                                        Я очень рада, что свой первый поход я ходила с Soul Tour. Весь маршрут прошел
+                                        на одном дыхании - виды завораживали своим разнообразием. Очень комфортно, что
+                                        ты получаешь все ответы на свои вопросы. Не надо думать, куда идти, где
+                                        остановится на обед, на ночлег, нужно только идти и лицезреть монументальные
+                                        виды гор, прощая, отпуская и забывая все ненужное и оставляя в душе только
+                                        восхищение и благодать окружающего нас мира.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feedback__slider-wrapper">
+                                <div class="feedback__slider-item whitespace">
+                                    <div class="feedback__slider-top flex-jc">
+                                        <img class="feedback__slider-avatar" src="images/avatar-woman.jpg" alt="avatar">
+                                        <div class="feedback__slider-about">
+                                            <a class="feedback__slider-name" href="#">
+                                                Татьяна
+                                            </a>
+                                            <span class="feedback__slider-info">
+                                                23 года
+                                            </span>
+                                            <span class="feedback__slider-info">
+                                                Треккинг к базовому лагерю Эвереста
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feedback__slider-text item-text">
+                                        Я очень рада, что свой первый поход я ходила с Soul Tour. Весь маршрут прошел
+                                        на одном дыхании - виды завораживали своим разнообразием. Очень комфортно, что
+                                        ты получаешь все ответы на свои вопросы. Не надо думать, куда идти, где
+                                        остановится на обед, на ночлег, нужно только идти и лицезреть монументальные
+                                        виды гор, прощая, отпуская и забывая все ненужное и оставляя в душе только
+                                        восхищение и благодать окружающего нас мира.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feedback__slider-wrapper">
+                                <div class="feedback__slider-item whitespace">
+                                    <div class="feedback__slider-top flex-jc">
+                                        <img class="feedback__slider-avatar" src="images/avatar-woman.jpg" alt="avatar">
+                                        <div class="feedback__slider-about">
+                                            <a class="feedback__slider-name" href="#">
+                                                Татьяна
+                                            </a>
+                                            <span class="feedback__slider-info">
+                                                23 года
+                                            </span>
+                                            <span class="feedback__slider-info">
+                                                Треккинг к базовому лагерю Эвереста
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="feedback__slider-text item-text">
+                                        Я очень рада, что свой первый поход я ходила с Soul Tour. Весь маршрут прошел
+                                        на одном дыхании - виды завораживали своим разнообразием. Очень комфортно, что
+                                        ты получаешь все ответы на свои вопросы. Не надо думать, куда идти, где
+                                        остановится на обед, на ночлег, нужно только идти и лицезреть монументальные
+                                        виды гор, прощая, отпуская и забывая все ненужное и оставляя в душе только
+                                        восхищение и благодать окружающего нас мира.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="discount">
+                <div class="container">
+                    <div class="discount__wrapper flex-c">
+                        <div class="discount__inner">
+                            <div class="discount__title title">
+                                Хочешь скидку на первый поход?
+                            </div>
+                            <div class="discount__text">
+                                Подпишись на нашу рассылку!
+                            </div>
+                            <div class="discount__form">
+                                <label class="visually-hidden" for="enter-name1">Введите имя</label>
+                                <input class="discount__input input" type="text" name="name" id="enter-name1"
+                                    placeholder="Имя" required>
+                                <label class="visually-hidden" for="enter-email1">Введите имя</label>
+                                <input class="discount__input input" type="email" name="email" id="enter-emai1"
+                                    placeholder="E-mail" required>
+                                <button class="discount__btn button" type="submit">
+                                    Получить скидку!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('_footer.html')
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

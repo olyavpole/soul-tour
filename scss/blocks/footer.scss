@@ -1,0 +1,41 @@
+// ALL STYLES FOR FOOTER BLOCK
+
+.footer {
+    background-color: rgb(44, 58, 75);
+    font-size: 20px;
+    color: $white;
+
+    &__main {
+        @media (max-width: 850px) {
+            display: block;
+        }
+    }
+
+    &__logo {
+        @media (max-width: 850px) {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__info {
+        @media (max-width: 850px) {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__socials {
+        @media (max-width: 850px) {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__bottom {
+        padding: 10px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+}

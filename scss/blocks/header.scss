@@ -1,0 +1,334 @@
+// ALL STYLES FOR HEADER BLOCK
+
+.header {
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    
+    // верхняя часть
+
+    &__top {
+        background-color: $green;
+    }
+
+    &__top-inner {
+        position: relative;
+        min-height: 100px;
+
+        @media (max-width: 550px) {
+            min-height: 80px;
+        }
+    }
+
+    &__top-img {
+        display: block;
+
+        @media (max-width: 550px) {
+            width: 130px;
+        }
+    }
+
+    &__top-contacts {
+        margin-left: auto;
+        margin-right: 30px;
+
+        @media (max-width: 850px) {
+            font-size: 0;
+        }
+    }
+
+    &__top-phone {
+        transition: text-decoration 0.3s;
+
+        @media (max-width: 850px) {
+            position: absolute;
+            z-index: 5;
+            right: 3px;
+            bottom: -43px;
+            width: 30px;
+            height: 30px;
+            font-size: 0;
+            background-image: url(../../images/icons/phone.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 550px) {
+            right: 2px;
+            bottom: -35px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__top-btn {
+
+        &:hover {
+            background-color: $dark-green;
+            color: $white;
+        }
+
+        @media (max-width: 550px) {
+            padding: 3px 13px;
+        }
+    }
+
+    // нижняя часть с меню
+
+    &__bottom {
+        background-color: $white;
+    }
+
+    &__bottom-inner {
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 550px) {
+            min-height: 40px;
+        }
+    }
+
+    &__menu {
+        position: relative;
+        width: 100%;
+    }
+
+    &__menu-list {
+
+        @media (max-width: 850px) {
+            position: absolute;
+            left: 0;
+            top: 35px;
+            z-index: 2;
+            min-height: 0;
+            max-height: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: white;
+
+            transition: all 0.5s;
+        }
+    }
+
+    &__menu-list.active {
+
+        @media (max-width: 850px) {
+            min-height: 210px;
+            max-height: 600px;
+            overflow: auto;
+
+            transition: all 0.5s;
+        }
+    }
+
+    &__menu-item {
+        position: relative;
+        display: inline-block;
+
+        & + & {
+            margin-left: 20px;
+
+            @media (max-width: 850px) {
+                margin-left: 0;
+            }
+        }
+
+        // ховер на появление дропдаунов
+
+        &:hover {
+            .dropdown {
+                display: block;
+            }
+        }
+
+        @media (max-width: 850px) {
+            display: block;
+        }
+    }
+
+    &__menu-link {
+        padding: 5px 7px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: rgba(23, 48, 58, 0.6);
+
+        transition: all 0.3s;
+
+        @media (max-width: 850px) {
+            padding: 10px 25px 10px 5px;
+        }
+
+        @media (min-width: 850px) {
+
+            // ховер на наведение для всех
+
+            &:hover {
+                color: rgba(23, 48, 58, 1);
+                background-color: rgba(169, 194, 178, 0.9);
+            }
+
+        }
+
+        &--dropdown {
+            position: relative;
+            padding: 5px 25px 10px 5px;
+
+            &::after {
+                content: "\e874";
+                top: 8px;
+                right: 7px;
+                position: absolute;
+                font-size: 12px;
+                font-family: 'Linearicons-Free';
+                color: rgba(23,48,58,0.6);
+
+                transition: all 0.3s;
+
+                @media (max-width: 850px) {
+                    top: 13px;
+                }
+            }
+
+            @media (max-width: 850px) {
+                padding: 10px 25px 10px 5px;
+            }
+        }
+
+        &--dropdown.active {
+
+            @media (max-width: 850px) {
+                &::after {
+                    transform: rotate(180deg);
+
+                    transition: all 0.3s;
+                } 
+            }
+        }
+
+        &--dropdown.active1 {
+            
+            @media (min-width: 850px) {
+                color: rgba(23, 48, 58, 1);
+                background-color: rgba(169, 194, 178, 0.9);
+            }
+        }
+    }
+
+    // стили дропдаунов
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 32px;
+        left: 0;
+        z-index: 2;
+        padding: 10px 0;
+        width: 175px;
+        background-color: rgba(169, 194, 178, 0.9);
+
+        &__link {
+            padding: 10px 15px 10px 7px;
+            font-size: 19px;
+            transition: color 0.3s;
+
+
+            @media (min-width: 850px) {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        @media (max-width: 850px) {
+            display: block;
+            position: relative;
+            padding: 0;
+            min-height: 0;
+            max-height: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: #f5f5f5;
+
+            transition: all 0.3s;
+        }
+    }
+
+    @media (max-width: 850px) {
+
+        .dropdown.active {
+            position: static;
+            padding: 10px 0;
+            min-height: 100px;
+            max-height: 300px;
+            overflow: auto;
+    
+            transition: all 0.3s;
+        }
+    }
+
+    // стили бургера
+
+    &__burger {
+        display: none;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+
+        @media (max-width: 850px) {
+            display: block;
+        }
+    }
+
+    &__burger span{
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin-bottom: 5px;
+        background-color: #71856e;
+    }
+}
+
+// изменения шапки при скролле
+
+@media (min-width: 550px) {
+
+    &.active {
+
+        .header__top-inner {
+            min-height: auto;
+            height: 60px;
+        }
+
+        .header__top-img {
+            width: 110px;
+        }
+
+        .header__bottom-inner {
+            min-height: auto;
+            height: 35px;
+        }
+
+        .header__top-btn {
+            padding: 3px 10px;
+        }
+
+        .header__menu-link {
+            font-size: 17px;
+        }
+
+        .header__top-phone {
+
+            @media (max-width: 850px) {
+                right: 4px;
+                bottom: -32px;
+            }
+        }
+    }
+}

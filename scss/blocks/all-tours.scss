@@ -1,0 +1,46 @@
+// ALL STYLES FOE ALL TOURS PAGE
+
+.all-tours {
+    padding: 10px 0 100px;
+
+    @media (max-width: 550px) {
+        padding: 10px 0 60px;
+    }
+
+    &__wrapper {
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        @media (max-width: 550px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__buttons {
+        margin-bottom: 50px;
+
+        @media (max-width: 550px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__buttons-btn {
+        margin: 0 10px 10px 0;
+    }
+
+    &__item {
+
+        @media (max-width: 1175px) {
+            max-width: 49%;
+        }
+
+        @media (max-width: 850px) {
+            margin: 0 auto 20px;
+            max-width: 90%;
+        }
+
+        @media (max-width: 550px) {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+// глобальные стили для страницы
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #17303A;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__content {
+        flex: 1 0 auto;
+    }
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

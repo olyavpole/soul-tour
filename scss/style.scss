@@ -1,0 +1,14 @@
+@import './global/vars';
+@import './global/global';
+@import './global/fonts';
+@import './global/icon-fonts';
+@import './global/helpers';
+
+@import './components/items.scss';
+
+@import './blocks/header.scss';
+@import './blocks/main.scss';
+@import './blocks/footer.scss';
+@import './blocks/single-tour.scss';
+@import './blocks/all-tours.scss';
+@import './blocks/single-destination.scss';

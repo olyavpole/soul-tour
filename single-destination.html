@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Tour - Непал</title>
+    <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="page__wrapper">
+        <main class="page__content">
+                    <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__top-inner flex-jc">
+                        <a class="header__top-logo" href="index.html">
+                            <img class="header__top-img" src="images/logo/logo.svg" alt="logo">
+                        </a>
+
+                        <div class="header__top-contacts">
+                            Нужна помощь? Звони <a class="header__top-phone"
+                                href="tel:89110001200">8-911-000-12-00</a>
+                        </div>
+
+                        <div class="header__top-buttons">
+                            <a class="header__top-btn button" data-fancybox data-src="#search-form"
+                                href="javascript:;">Подбор
+                                тура</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__bottom-inner">
+                        <nav class="header__menu">
+                            <button class="header__burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <ul class="header__menu-list">
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link header__menu-link--dropdown" href="#">
+                                        О нас
+                                    </a>
+                                    <ul class="header__menu-dropdown dropdown">
+                                        <li class="dropdown__item"><a class="dropdown__link" href="index.html#about-us">Наши
+                                                ценности</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="index.html#achievements">Почему мы?</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link header__menu-link--dropdown"
+                                        href="index.html#our-destinations">
+                                        Направления
+                                    </a>
+                                    <ul class="header__menu-dropdown dropdown">
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Кавказ</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Индонезия</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Крым</a>
+                                        </li>
+                                        <li class="dropdown__item"><a class="dropdown__link"
+                                                href="single-destination.html" target="_blank">Непал</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="#our-tours">Туры</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="#feedback">Отзывы</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="#footer">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-form whitespace" id="search-form">
+                <div class="popup-form__body">
+                    <span class="popup-form__top">
+                        Подобрать поход
+                    </span>
+                    <div class="popup-form__title">
+                        Заполните эту анкету, и мы подберем для вас максимално подходящее путешествие по всем
+                        параметрам.
+                    </div>
+                    <form class="popup-form__form">
+                        <label class="popup-form__label" for="username">
+                            ФИО
+                        </label>
+                        <input class="popup-form__input input" type="text" name="username" id="username"
+                            placeholder="Иванов Иван Иванович" required>
+                        <label class="popup-form__label" for="phone">
+                            Номер телефона
+                        </label>
+                        <input class="popup-form__input input" type="tel" name="tel" id="phone" placeholder="+7 911 999 99 99"
+                            required>
+
+                        <label class="popup-form__label" for="mail">
+                            Адрес электронной почты
+                        </label>
+                        <input class="popup-form__input input" type="email" name="mail" id="mail" placeholder="ivan@domain.com"
+                            required>
+
+                        <div class="popup-form__wrapper flex-jc">
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="destination">Направление</label>
+                                <select class="popup-form__select select" name="destination" id="destination">
+                                    <option value="Кавказ">Кавказ</option>
+                                    <option value="Непал">Непал</option>
+                                    <option value="Алтай">Алтай</option>
+                                    <option value="Альпы">Альпы</option>
+                                    <option value="Индонезия">Индонезия</option>
+                                </select>
+                            </div>
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="type">Тип похода</label>
+                                <select class="popup-form__select select" name="type" id="type">
+                                    <option value="Легкий пеший поход">Легкий пеший поход</option>
+                                    <option value="Поход с рюкзаками">Поход с рюкзаками</option>
+                                    <option value="Скалолазание">Скалолазание</option>
+                                    <option value="Восхождение">Восхождение</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label class="popup-form__label" for="date">
+                            Примерные даты путешествия
+                        </label>
+                        <input class="popup-form__input input" type="text" name="date" id="date"
+                            placeholder="11.01.2021 - 30.01.2021" required>
+
+                        <label class="popup-form__label" for="budget">
+                            Бюджет
+                        </label>
+                        <input class="popup-form__input input" type="text" name="budget" id="budget" placeholder="50000 рублей">
+
+
+                        <div class="popup-form__wrapper flex-jc">
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="living">Проживание</label>
+                                <select class="popup-form__select select" name="living" id="living">
+                                    <option value="В гостинице">В гостинице</option>
+                                    <option value="В палатке">В палатке</option>
+                                    <option value="Неважно">Неважно</option>
+                                </select>
+                            </div>
+                            <div class="popup-form__inner">
+                                <label class="popup-form__label" for="experience">Опыт</label>
+                                <select class="popup-form__select select" name="experience" id="experience">
+                                    <option value="Новичок">Новичок</option>
+                                    <option value="Любитель">Любитель</option>
+                                    <option value="Опытный">Опытный</option>
+                                    <option value="Профессионал">Профессионал</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <input class="popup-form__input input--checkbox" type="checkbox" name="children" id="children">
+                        <label class="popup-form__label popup-form__label--checkbox" for="children">
+                            Дети
+                        </label>
+
+                        <button class="popup-form__btn button" type="submit">Отправить</button>
+                    </form>
+                    <div class="popup-form__bottom">
+                        <div class="popup-form__text">
+                            Нажимая «Подобрать бесплатно», вы соглашаетесь на <a class="popup-form__text-link"
+                                href="#">обработку персональных данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+            <section class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__inner">
+                        <a class="breadcrumbs__item" href="index.html">Главная</a>
+                        <a class="breadcrumbs__item" href="index.html#our-destinations">Все направления</a>
+                        <span class="breadcrumbs__item">Непал</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="single-destination">
+                <div class="container">
+                    <div class="single-destination__title title">
+                        Непал
+                    </div>
+                    <div class="single-destination__slider">
+                        <div class="single-destination__slider-main slider-top">
+                            <div class="slider-top__item">
+                                <img class="slider-top__image" src="images/nepal-5.jpg" alt="img">
+                            </div>
+                            <div class="slider-top__item">
+                                <img class="slider-top__image" src="images/nepal-6.jpg" alt="img">
+                            </div>
+                            <div class="slider-top__item">
+                                <img class="slider-top__image" src="images/nepal-3.jpg" alt="img">
+                            </div>
+                            <div class="slider-top__item">
+                                <img class="slider-top__image" src="images/nepal-4.jpg" alt="img">
+                            </div>
+                            <div class="slider-top__item">
+                                <img class="slider-top__image" src="images/nepal-7.jpg" alt="img">
+                            </div>
+                        </div>
+                        <div class="single-destination__slider-small slider-nav">
+                            <div class="slider-nav__item">
+                                <img class="slider-nav__image" src="images/nepal-5.jpg" alt="img">
+                            </div>
+                            <div class="slider-nav__item">
+                                <img class="slider-nav__image" src="images/nepal-6.jpg" alt="img">
+                            </div>
+                            <div class="slider-nav__item">
+                                <img class="slider-nav__image" src="images/nepal-3.jpg" alt="img">
+                            </div>
+                            <div class="slider-nav__item">
+                                <img class="slider-nav__image" src="images/nepal-4.jpg" alt="img">
+                            </div>
+                            <div class="slider-nav__item">
+                                <img class="slider-nav__image" src="images/nepal-7.jpg" alt="img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single-destination__text item-text">
+                        Удивительный Непал – мистическое место между Китаем и Индией. Центр энергетических потоков,
+                        родина Будды, обитель мудрых лам и просветленных монахов, самая высокогорная и одна из беднейших
+                        стран мира. Историческое прошлое Непала имеет настолько древние корни, что одна из его областей
+                        – долина Катманду, объявлена охраняемым ЮНЕСКО объектом всемирного наследия.
+
+                        Однако, подавляющее большинство туристов едут в страну не за этим. Территорию этого небольшого
+                        королевства в Южной Азии украшают 8 из 14 известных мировых вершин-восьмитысячников, что сделало
+                        его настоящей Меккой альпинистов всего земного шара.
+
+                        Правда туры в Непал с командой Клуба Приключений покорения великих горных вершин не
+                        предполагает, но не менее захватывающий трекинг к базовым лагерям Аннапурны и Эвереста приведет
+                        в восторг и запомнится на всю жизнь. Наши маршруты, рассчитаны на людей в хорошей физической
+                        форме. По пути мы обязательно посетим ламаистские монастыри, побываем у захоронения Будды в
+                        долине Катманду, заедем в шумную столицу Непала, примем участие в сафари по национальному парку
+                        Читван, побываем на термальных источниках, познакомимся с большими белыми обезьянами и, если
+                        повезет, встретим йети.
+
+                        Походы по Непалу связаны с большими перепадами высот и необходимостью в акклиматизации. Стоит
+                        быть готовым к проявлениям горной болезни – головной боли и головокружению. Однако те, кто не
+                        испугаются трудностей на маршруте, будут с лихвой вознаграждены фантастическими видами,
+                        интереснейшими экскурсами в историю, запоминающимися встречами и знакомствами с местными
+                        диковинами.
+                    </div>
+
+                    <div class="single-destination__subtitle">
+                        Почему стоит пойти в Непал с нами
+                    </div>
+
+                    <ul class="single-destination__list">
+                        <li class="single-destination__line">
+                            Мы в восторге от Непала и вы тоже будете! Непал оказывает какое-то магическое воздействие
+                            на человека, и мы не исключение. Каждый раз хочется увидеть что-то новое и насквозь
+                            пропитаться царящей здесь атмосферой.
+                        </li>
+                        <li class="single-destination__line">
+                            В каждом треккинге мы стараемся показать людям как
+                            можно больше, не ограничиваясь описанием маршрута на сайте. Конечно, только при вашем
+                            желании. А оно, как правило, есть!
+                        </li>
+                        <li class="single-destination__line">
+                            Заявленные походы обязательно состоятся. Ситуации, когда вы купите билеты, а поход отменится
+                            по нашей вине, исключены.
+                        </li>
+                        <li class="single-destination__line">
+                            Продуманные маршруты. Маршруты построены так, чтобы вы максимум всего увидели и попробовали,
+                            при этом не рискуя своим здоровьем. 
+                        </li>
+                        <li class="single-destination__line">
+                            Треки абсолютно разные по сложности,
+                            от самых простых до сложных – каждый выберет подходящий ему.
+                        </li>
+                        <li class="single-destination__line">
+                            Всю организацию на треке мы берем на себя. Все, о чем вам придется думать – это с какого
+                            ракурса лучше получится пик Аннапурны или Эвереста и что бы такого покушать вечером.
+                        </li>
+                        <li class="single-destination__line">
+                            Вы узнаете Непал изнутри. Мы будем бродить каменистыми тропками среди небольших поселков и
+                            вы увидите, как живут непальцы, как они моют головы (очень любят это занятие), как плетут из
+                            бамбука новые корзины, как с приветливой улыбкой на лице кричат вам «Namaste!»
+                        </li>
+                        <li class="single-destination__line">
+                            Непал – это дорого. Но с нами дешевле. Мы непосредственно занимаемся организацией и
+                            проведением треккинга, так что у нас отсутствуют накрутки турагенств и другие издержки. Мы
+                            стараемся сделать треккинг в Непале максимально комфортным и экономным для вас, ведь нам
+                            хочется, чтобы как можно больше людей прикоснулось к культуре этой дивной страны!
+                        </li>
+                        <li class="single-destination__line">
+                            Мы поможем вам с подготовкой к походу, покупкой билетов, подбором снаряжения.
+                        </li>
+                    </ul>
+
+                    <div class="single-destination__nearest nearest-dates">
+                        <div class="nearest-dates__title">
+                            Ближайшие туры в этом направлении
+                        </div>
+                        <table class="nearest-dates__table">
+                            <tr class="nearest-dates__table-row">
+                                <th class="nearest-dates__table-title">
+                                    Тур
+                                </th>
+                                <th class="nearest-dates__table-title">
+                                    Дата похода
+                                </th>
+                                <th class="nearest-dates__table-title col2">
+                                    Гид
+                                </th>
+                                <th class="nearest-dates__table-title">
+                                    Cтоимость
+                                </th>
+                                <th class="nearest-dates__table-title col2">
+                                    Мест
+                                </th>
+                            </tr>
+                            <tr class="nearest-dates__table-row">
+                                <td class="nearest-dates__table-item">
+                                    Треккинг к базовому лагерю Эвереста
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    22.03.2021 - 05.04.2021
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    Гид Soul Tour
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    900$
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    1
+                                </td>
+                            </tr>
+                            <tr class="nearest-dates__table-row">
+                                <td class="nearest-dates__table-item">
+                                    Треккинг к базовому лагерю Эвереста
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    22.03.2021 - 05.04.2021
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    Гид Soul Tour
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    900$
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    1
+                                </td>
+                            </tr>
+                            <tr class="nearest-dates__table-row">
+                                <td class="nearest-dates__table-item">
+                                    Восхождение на Айленд пик
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    22.03.2021 - 05.04.2021
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    Гид Soul Tour
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    900$
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    6
+                                </td>
+                            </tr>
+                            <tr class="nearest-dates__table-row">
+                                <td class="nearest-dates__table-item">
+                                    Трек вокруг Аннапурны
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    22.03.2021 - 05.04.2021
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    Гид Soul Tour
+                                </td>
+                                <td class="nearest-dates__table-item">
+                                    900$
+                                </td>
+                                <td class="nearest-dates__table-item col2">
+                                    10
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="single-destination__tours">
+                        <div class="single-destination__subtitle">
+                            Самые популярные туры в Непал
+                        </div>
+
+                        <div class="single-destination__wrapper flex-jc">
+                            <div class="single-destination__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/everest.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html" target="_blank">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html" target="_blank">
+                                        Треккинг к базовому лагерю Эвереста
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="single-destination.html" target="_blank">
+                                            Непал
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            16 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Трекинг к базовому лагерю Эвереста дает вам возможность сполна насладиться
+                                        видами на
+                                        высочайшую вершину мира и окружающих ее гигантов в национальном парке
+                                        Сагарматха.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>6 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>70 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">70000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="single-tour.html" target="_blank">23
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button" href="single-tour.html" target="_blank">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single-destination__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/nepal-5.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html" target="_blank">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html" target="_blank">
+                                        Треккинг к базовому лагерю Аннапурны
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="single-destination.html" target="_blank">
+                                            Непал
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            14 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Трек к Аннапурне – прекрасная возможность побывать в центре загадочного Непала, древнейших Гималаев, прикоснуться к загадочным храмам Непала, увидеть цветущие рододендроны!
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>4 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>95 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">50000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="single-tour.html" target="_blank">5
+                                            отзывов</a>
+                                        <a class="info__item info__item--link button" href="single-destination.html" target="_blank">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single-destination__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/island-pik.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html" target="_blank">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html" target="_blank">
+                                        Восхождение на Айленд пик
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="single-destination.html" target="_blank">
+                                            Непал
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            19 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Во время восхождения на Айленд пик нас ждут снежно-ледовые поля, передвижение в кошках с ледорубами по перилам, лестницы через трещины , а в конце – 200 метров крутого взлета и работы с жумаром.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>6 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>120 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">120000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">2
+                                            отзыва</a>
+                                        <a class="info__item info__item--link button" href="single-tour.html" target="_blank">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single-destination__item tour-card whitespace">
+                                <div class="tour-card__wrapper">
+                                    <img class="tour-card__img" src="images/ama-dablam.jpg" alt="image">
+                                    <div class="tour-card__hover flex-c">
+                                        <a class="tour-card__btn button" href="single-tour.html" target="_blank">Узнать больше</a>
+                                    </div>
+                                </div>
+                                <div class="tour-card__content">
+                                    <a class="tour-card__title" href="single-tour.html" target="_blank">
+                                        Восхождение на Ама Даблам
+                                    </a>
+                                    <div class="tour-card__info info">
+                                        <a class="info__item info__item--world lnr-map-marker" href="single-destination.html" target="_blank">
+                                            Непал
+                                        </a>
+                                        <span class="info__item info__item--days lnr-sun">
+                                            28 дней
+                                        </span>
+                                    </div>
+                                    <div class="tour-card__text item-text">
+                                        Ама-Даблам - одна из красивейших вершин планеты! Ама-Даблам - вершина-мечта, столь красива, сколь и сложна. Это настоящий вызов, который под силу лишь самым сильным и опытным.
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Сложность: <span>7 / 7</span>
+                                    </div>
+                                    <div class="tour-card__extra flex-jc">
+                                        Расстояние: <span>120 км</span>
+                                    </div>
+                                    <div class="tour-card__bottom info">
+                                        <a class="info__item info__item--cart lnr-cart" href="#">290000 рублей</a>
+                                        <a class="info__item info__item--comments lnr-bubble" href="#">1
+                                            отзыв</a>
+                                        <a class="info__item info__item--link button" href="single-tour.html" target="_blank">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+                <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__main flex-jc">
+                    <a class="footer__logo" href="index.html">
+                        <img class="footer__logo-img" src="images/logo/footer-logo.svg" alt="logo">
+                    </a>
+                    <div class="footer__info">
+                        <a href="tel:79119999999" class="footer__link">
+                            +7 911 999 99 99
+                        </a>
+                        <a href="mailto:book@soultour.com" class="footer__link">
+                            book@soultour.com
+                        </a>
+                    </div>
+                    <div class="footer__socials socials">
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" viewBox="0 0 512 512">
+                                <path
+                                    d="M256 0c-141.4 0-256 114.6-256 256s114.6 256 256 256 256-114.6 256-256-114.6-256-256-256zM381.8 175.5l-42 197.9c-2.9 14.1-11.4 17.4-23.2 10.9l-64-47.3-30.7 29.9c-3.6 3.5-6.4 6.4-12.8 6.4-8.3 0-6.9-3.1-9.7-11l-21.8-71.6-63.3-19.7c-13.7-4.2-13.8-13.6 3.1-20.3l246.6-95.2c11.2-5.1 22.1 2.7 17.8 20z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" viewBox="0 0 512 512">
+                                <path
+                                    d="M436.5 74.4c-47.9-48-111.6-74.4-179.5-74.4-139.8 0-253.6 113.8-253.6 253.7 0 44.7 11.7 88.4 33.9 126.8l-36 131.5 134.5-35.3c37.1 20.2 78.8 30.9 121.2 30.9h0.1c0 0 0 0 0 0 139.8 0 253.7-113.8 253.7-253.7 0-67.8-26.4-131.5-74.3-179.5zM257.1 464.8v0c-37.9 0-75-10.2-107.4-29.4l-7.7-4.6-79.8 20.9 21.3-77.8-5-8c-21.2-33.5-32.3-72.3-32.3-112.2 0-116.3 94.6-210.9 211-210.9 56.3 0 109.3 22 149.1 61.8 39.8 39.9 61.7 92.8 61.7 149.2-0.1 116.4-94.7 211-210.9 211zM372.7 306.8c-6.3-3.2-37.5-18.5-43.3-20.6s-10-3.2-14.3 3.2c-4.2 6.3-16.4 20.6-20.1 24.9-3.7 4.2-7.4 4.8-13.7 1.6s-26.8-9.9-51-31.5c-18.8-16.8-31.6-37.6-35.3-43.9s-0.4-9.8 2.8-12.9c2.9-2.8 6.3-7.4 9.5-11.1s4.2-6.3 6.3-10.6c2.1-4.2 1.1-7.9-0.5-11.1s-14.3-34.4-19.5-47.1c-5.1-12.4-10.4-10.7-14.3-10.9-3.7-0.2-7.9-0.2-12.1-0.2s-11.1 1.6-16.9 7.9c-5.8 6.3-22.2 21.7-22.2 52.9s22.7 61.3 25.9 65.6c3.2 4.2 44.7 68.3 108.3 95.7 15.1 6.5 26.9 10.4 36.1 13.4 15.2 4.8 29 4.1 39.9 2.5 12.2-1.8 37.5-15.3 42.8-30.1s5.3-27.5 3.7-30.1c-1.5-2.8-5.7-4.4-12.1-7.6z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" viewBox="0 0 512 512">
+                                <path
+                                    d="M464 0h-416c-26.4 0-48 21.6-48 48v416c0 26.4 21.6 48 48 48h416c26.4 0 48-21.6 48-48v-416c0-26.4-21.6-48-48-48zM414.7 358.4l-46.8 0.7c0 0-10.1 2-23.3-7.1-17.5-12-34-43.3-46.9-39.2-13 4.1-12.6 32.2-12.6 32.2s0.1 6-2.9 9.2c-3.2 3.5-9.6 4.2-9.6 4.2h-20.9c0 0-46.2 2.8-86.9-39.6-44.4-46.2-83.6-137.9-83.6-137.9s-2.3-6 0.2-8.9c2.8-3.3 10.3-3.5 10.3-3.5l50.1-0.3c0 0 4.7 0.8 8.1 3.3 2.8 2 4.3 5.9 4.3 5.9s8.1 20.5 18.8 39c20.9 36.1 30.7 44 37.8 40.2 10.3-5.6 7.2-51.1 7.2-51.1s0.2-16.5-5.2-23.8c-4.2-5.7-12.1-7.4-15.5-7.8-2.8-0.4 1.8-6.9 7.8-9.9 9-4.4 24.9-4.7 43.7-4.5 14.6 0.1 18.9 1.1 24.6 2.4 17.3 4.2 11.4 20.3 11.4 58.9 0 12.4-2.2 29.8 6.7 35.5 3.8 2.5 13.2 0.4 36.7-39.5 11.1-18.9 19.5-41.1 19.5-41.1s1.8-4 4.6-5.7c2.9-1.7 6.8-1.2 6.8-1.2l52.7-0.3c0 0 15.8-1.9 18.4 5.3 2.7 7.5-5.9 25-27.4 53.7-35.3 47.1-39.3 42.7-9.9 69.9 28 26 33.8 38.7 34.8 40.3 11.4 19.2-13 20.7-13 20.7z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" viewBox="0 0 512 512">
+                                <path
+                                    d="M304 96h80v-96h-80c-61.757 0-112 50.243-112 112v48h-64v96h64v256h96v-256h80l16-96h-96v-48c0-8.673 7.327-16 16-16z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a class="socials__link" href="#">
+                            <svg class="socials__icon" viewBox="0 0 512 512">
+                                <path
+                                    d="M256 46.1c68.4 0 76.5 0.3 103.4 1.5 25 1.1 38.5 5.3 47.5 8.8 11.9 4.6 20.5 10.2 29.4 19.1 9 9 14.5 17.5 19.2 29.4 3.5 9 7.7 22.6 8.8 47.5 1.2 27 1.5 35.1 1.5 103.4s-0.3 76.5-1.5 103.4c-1.1 25-5.3 38.5-8.8 47.5-4.6 11.9-10.2 20.5-19.1 29.4-9 9-17.5 14.5-29.4 19.2-9 3.5-22.6 7.7-47.5 8.8-27 1.2-35.1 1.5-103.4 1.5s-76.5-0.3-103.4-1.5c-25-1.1-38.5-5.3-47.5-8.8-11.9-4.6-20.5-10.2-29.4-19.1-9-9-14.5-17.5-19.2-29.4-3.5-9-7.7-22.6-8.8-47.5-1.2-27-1.5-35.1-1.5-103.4s0.3-76.5 1.5-103.4c1.1-25 5.3-38.5 8.8-47.5 4.6-11.9 10.2-20.5 19.1-29.4 9-9 17.5-14.5 29.4-19.2 9-3.5 22.6-7.7 47.5-8.8 26.9-1.2 35-1.5 103.4-1.5zM256 0c-69.5 0-78.2 0.3-105.5 1.5-27.2 1.2-45.9 5.6-62.1 11.9-16.9 6.6-31.2 15.3-45.4 29.6-14.3 14.2-23 28.5-29.6 45.3-6.3 16.3-10.7 34.9-11.9 62.1-1.2 27.4-1.5 36.1-1.5 105.6s0.3 78.2 1.5 105.5c1.2 27.2 5.6 45.9 11.9 62.1 6.6 16.9 15.3 31.2 29.6 45.4 14.2 14.2 28.5 23 45.3 29.5 16.3 6.3 34.9 10.7 62.1 11.9 27.3 1.2 36 1.5 105.5 1.5s78.2-0.3 105.5-1.5c27.2-1.2 45.9-5.6 62.1-11.9 16.8-6.5 31.1-15.3 45.3-29.5s23-28.5 29.5-45.3c6.3-16.3 10.7-34.9 11.9-62.1 1.2-27.3 1.5-36 1.5-105.5s-0.3-78.2-1.5-105.5c-1.2-27.2-5.6-45.9-11.9-62.1-6.3-17-15-31.3-29.3-45.5-14.2-14.2-28.5-23-45.3-29.5-16.3-6.3-34.9-10.7-62.1-11.9-27.4-1.3-36.1-1.6-105.6-1.6v0z">
+                                </path>
+                                <path
+                                    d="M256 124.5c-72.6 0-131.5 58.9-131.5 131.5s58.9 131.5 131.5 131.5 131.5-58.9 131.5-131.5c0-72.6-58.9-131.5-131.5-131.5zM256 341.3c-47.1 0-85.3-38.2-85.3-85.3s38.2-85.3 85.3-85.3c47.1 0 85.3 38.2 85.3 85.3s-38.2 85.3-85.3 85.3z">
+                                </path>
+                                <path
+                                    d="M423.4 119.3c0 16.955-13.745 30.7-30.7 30.7s-30.7-13.745-30.7-30.7c0-16.955 13.745-30.7 30.7-30.7s30.7 13.745 30.7 30.7z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <a class="footer__link" href="index.html">© soul tour</a>
+                    <a class="footer__link" href="index.html">2009 - 2020</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+.single-destination {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+
+    @media (max-width: 550px) {
+        padding: 30px 0;
+    }
+
+    &__slider {
+        margin-bottom: 50px;
+
+        .slick-arrow {
+            height: 50px;
+            width: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+        
+            &::before {
+                font-size: 30px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    &__wrapper {
+        flex-wrap: wrap;
+    }
+
+    &__item {
+
+        @media (max-width: 1175px) {
+            max-width: 49%;
+        }
+
+        @media (max-width: 850px) {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 80px;
+        font-size: 21px;
+        line-height: 34px;
+
+        @media (max-width: 550px) {
+            margin-bottom: 40px;
+            font-size: 19px;
+            line-height: 32px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 50px;
+        font-size: 38px;
+        line-height: 38px;
+        text-align: center;
+
+        @media (max-width: 550px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        margin-bottom: 80px;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    &__line {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        font-family: 'Roboto', sans-serif;
+        word-spacing: -2px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+    }
+
+    &__nearest {
+        margin-bottom: 80px;
+
+        .nearest-dates {
+
+            &__title {
+                margin-bottom: 50px;
+                line-height: 35px;
+            }
+    
+            &__table-title {
+
+                &:first-child {
+                    width: 280px;
+                }
+    
+                &:nth-child(2) {
+                    width: 185px;
+                }
+            }
+
+            &__table-item {
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+.slider-top {
+    margin-bottom: 20px;
+
+    &__image {
+        display: block;
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+
+        @media (max-width: 550px) {
+            height: 400px;
+        }
+    }
+}
+
+.slider-nav {
+
+    @media (max-width: 850px) {
+        display: none;
+    }
+
+    &__item {
+        margin-right: 20px
+    }
+
+    &__image {
+        display: block;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
